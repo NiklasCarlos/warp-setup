@@ -1,0 +1,134 @@
+go env -w GOPATH=C:\Users\NIK\Desktop\Uni\Masterarbeit\student_projects\tu-berlin-awt-pj-ss23-http3
+
+
+--------set up für go-warp in test-----------
+
+wsl--> cd /mnt/c/users/nik/desktop/uni/masterarbeit/warp-setup/warp-go
+
+-> certificate generieren
+aus readme philip
+1. ``cd warp-go/cert/``
+  2. ``./generate`` (bash script), generates the TLS certificate
+  
+  
+  media file source -> maybe already generated
+   3. ``cd ../media/`` 
+  4. place a video file of your choice in this directory, called ``source.mp4``
+  5. ``./generate`` (bash script), generates dash segments
+
+->wsl server go main
+-> richtige go verison: go1.18.exe
+7. ``goxxx run main.go`` //richtige go version verwenden
+  8. the server should be running now and confirm it by saying:
+    ``listening on :4443``
+
+-> und cmd für yarn serve in player ersetzt 9-12
+ /**9. open a new terminal in the root of this project 
+  10. ``cd warp-go/player/``
+  11. ``npm run install``
+  12. ``npm run serve``**/ersetzt durch yarn
+  
+  ## Web Player
+The web assets need to be hosted with a HTTPS server. If you're using a self-signed certificate, you may need to ignore the security warning in Chrome (Advanced -> proceed to localhost).
+
+```
+cd player
+yarn install
+yarn serve
+```
+
+-> dann batch script in test folder starten -> make sure all other chrome tabs are closed!!!!!!!!!!!
+ mit cmd in cd C:\Users\NIK\Desktop\Uni\Masterarbeit\test
+
+ type in cmd ->   myBatchScript.bat
+
+C:\Users\NIK\Desktop\Uni\Masterarbeit\student_projects\tu-berlin-awt-pj-ss23-http3
+
+
+-----------
+
+Set up unity render streaming
+
+- open unity example_1 pj
+
+- start webserver (in the unity project directory under Assets/Webserver
+	-> start the webserver on port 8080 (otherwise permission problems)
+	-> cmd in dir öffnen mit befehl: webserver.exe -p 8080
+
+- change settings for webserver in unity
+	-> project settings / render streaming / change url to cmd output result of webserver.exe
+	
+- open webstite in chrome browser-> check for cmd output of webserver.exe -> adresse under start as public mode (sth like http://172.27.16.1:8080
+	
+	
+-> start scene in unity
+
+
+
+-> click on streaming on website ( Reiceive sample on website link)
+
+
+
+
+-----------------------------
+
+
+git clone -c core.autocrlf=false https://github.com/kixelated/moq-js.git
+
+git clone -c core.autocrlf=false https://github.com/kixelated/moq-rs.git
+
+https://github.com/ArckyPN/tu-berlin-awt-pj-ss23-http3.git
+
+cd Users/NIK/Desktop/Uni/Masterarbeit/rust_pj
+
+
+cd Users/NIK/Desktop/Uni/Masterarbeit/test
+
+
+
+
+go1.18.exe
+
+
+
+
+
+cd C:/
+Users/NIK/Desktop/Uni/Masterarbeit/student_projects/tu-berlin-awt-pj-ss23-http3/warp-go/cert
+
+
+module github.com/kixelated/warp/cert
+
+go 1.18
+
+require (
+	filippo.io/mkcert v1.4.4 // indirect
+	golang.org/x/crypto v0.0.0-20220331220935-ae2d96664a29 // indirect
+	golang.org/x/net v0.0.0-20220421235706-1d1ef9303861 // indirect
+	golang.org/x/text v0.3.7 // indirect
+	howett.net/plist v1.0.0 // indirect
+	software.sslmate.com/src/go-pkcs12 v0.2.0 // indirect
+)
+
+replace filippo.io/mkcert => github.com/kixelated/mkcert v1.4.4-days
+
+
+
+
+setup Rust-------------------------
+
+## Setup
+
+
+in wsl
+cd Users/NIK/Desktop/Uni/Masterarbeit/rust_pj/moq-rs/dev
+
+
+### Certificates
+
+generate cert sihe moq-rs setup
+
+./cert
+
+
+

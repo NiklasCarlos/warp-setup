@@ -1,0 +1,67 @@
+my ffmpeg 
+
+zeilen einrücken nicht vergessen! 
+
+cd My_project_1
+
+
+C:\ffmpeg\bin\ffmpeg.exe -framerate 1 -i frame_%04d.png -map 0 -map 0 -c:a libfdk_aac -c:v libx264 -b:v:0 800k -b:v:1 300k -s:v:1 320x170 -aspect 16:9  
+-profile:v main -pix_fmt yuv420p -bf 1 -keyint_min 120 -g 120 -sc_threshold 0 -b_strategy 0 -ar:a:1 22050 -use_timeline 1 -use_template 1 -window_size 3
+-adaptation_sets "id=0,streams=v id=1,streams=a" -seg_duration 1 
+-f dash C:\Users\NIK\Desktop\UnityProjects\My_project_1\dash_live\out.mpd
+
+
+
+
+
+
+C:\ffmpeg\bin\ffmpeg.exe -framerate 1 -f png -i frame_%04d.png -map 0 -map 0 -c:a libfdk_aac -c:v libx264 -b:v:0 800k -b:v:1 300k -s:v:1 320x170 -aspect 16:9 -profile:v main -pix_fmt yuv420p -bf 1 -keyint_min 120 -g 120 -sc_threshold 0 -b_strategy 0 -ar:a:1 22050 -use_timeline 1 -use_template 1 -window_size 3 -adaptation_sets "id=0,streams=v id=1,streams=a" -seg_duration 1 -f dash C:\Users\NIK\Desktop\UnityProjects\My_project_1\dash_live\out.mpd
+
+
+C:\Users\NIK\Desktop\UnityProjects\My_project_1\Frames
+neuer chat gpt ohne aufdio
+
+C:\ffmpeg\bin\ffmpeg.exe -framerate 1 -i C:\Users\NIK\Desktop\UnityProjects\My_project_1\Frames\frame_%04d.png -c:v libx264 \
+-b:v:0 800k -b:v:1 300k -s:v:1 320x170 -aspect 16:9 -profile:v main -pix_fmt yuv420p -bf 1 \
+-keyint_min 120 -g 120 -sc_threshold 0 -b_strategy 0 -use_timeline 1 -use_template 1 -window_size 3 \
+-adaptation_sets "id=0,streams=v" -seg_duration 1 -f dash C:\Users\NIK\Desktop\UnityProjects\My_project_1\dash_live\out.mpd
+
+mit einrücken
+
+C:\ffmpeg\bin\ffmpeg.exe -framerate 1 -i C:\Users\NIK\Desktop\UnityProjects\My_project_1\Frames\frame_%04d.png -c:v libx264 -b:v:0 800k -b:v:1 300k -s:v:1 320x170 -aspect 16:9 -profile:v main -pix_fmt yuv420p -bf 1 -keyint_min 120 -g 120 -sc_threshold 0 -b_strategy 0 -use_timeline 1 -use_template 1 -window_size 3 -adaptation_sets "id=0,streams=v" -seg_duration 1 -f dash C:\Users\NIK\Desktop\UnityProjects\My_project_1\dash_live\out.mpd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Masterarbeit
+
+
+betreuer -> leitfaden für masterarbeit -> methodische vorgehensweise beschreiben
+
+506200124-032
+
+506200124-033
+
+
+
+C:\ffmpeg\bin\ffmpeg.exe -i C:\Users\NIK\Desktop\UnityProjects\My_project_2\Frames_2\frame_0.h264 C:\Users\NIK\Desktop\UnityProjects\My_project_2\Frames_2\output_framex1_%04d.png
+
+
+
+create mp4
+C:\ffmpeg\bin\ffmpeg.exe -framerate 1 -i frame_%04d.png -c:v libx264 -r 30 output.mp4
